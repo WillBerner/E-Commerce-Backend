@@ -77,6 +77,8 @@ Products:
 
 ## Contributions
 
+Contributions, issue requests, and feature requests are all welcomed.
+
 ## Questions
 
 If you have any questions about this software or how to use it, please reach out to me:
