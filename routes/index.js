@@ -1,3 +1,5 @@
+// Main route file that all other routes should go through.
+
 const router = require('express').Router();
 const apiRoutes = require('./api');
 

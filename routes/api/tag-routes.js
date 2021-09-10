@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
-// The `/api/tags` endpoint
+// `/api/tags` endpoint
 
+// Get all tags and product(s) associated with each
 router.get('/', async (req, res) => {
   try {
     const tagData = await Tag.findAll({
@@ -15,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get a single tag and the product(s) associated with it
 router.get('/:id', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
@@ -27,6 +29,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Create a single tag
 router.post('/', async (req, res) => {
   try {
     const newTag = await Tag.create(req.body);
@@ -37,6 +40,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Update a tag based on the given id
 router.put('/:id', async (req, res) => {
   try {
     const updatedTag = await Tag.update(req.body, {
@@ -51,6 +55,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Delete a tag based on the given id
 router.delete('/:id', async (req, res) => {
   try {
     const tagData = await Tag.destroy({
@@ -59,6 +64,7 @@ router.delete('/:id', async (req, res) => {
       }
     });
 
+    // If there wasn't anything to delete, let the client know.
     if (!tagData) {
       res.status(404).json({ message: "No category found with that id!" });
       return;
