@@ -1,7 +1,7 @@
 # E-Commerce-Backend
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-E-Commerce Backend is a backend API (surprise surprise) that makes use of CRUD operations for a general ecommerce website. The API is built with Express.js and Sequelize to interact with a MySQL database. There are endpoints for categories, tags, and products. Products belong to a single category but can have multiple tags, and tags can be attributed to multiple products.
+E-Commerce Backend is a backend API (surprise surprise) that makes use of CRUD operations for a general eCommerce website. The API is built with Express.js and Sequelize to interact with a MySQL database. There are endpoints for categories, tags, and products. Products belong to a single category but can have multiple tags, and tags can be attributed to multiple products.
 
 ## Table of Contents
    
